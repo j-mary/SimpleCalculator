@@ -6,7 +6,16 @@ namespace SimpleCalculator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            InputConverter inputConverter = new InputConverter();
+            CalculatorEngine calculatorEngine = new CalculatorEngine();
+
+            double firstNumber = inputConverter.ConvertInputToNumber(Console.ReadLine());
+            double secondNumber = inputConverter.ConvertInputToNumber(Console.ReadLine());
+            string operation = Console.ReadLine();
+
+            double result = calculatorEngine.Calculate(operation, firstNumber, secondNumber);
+
+            Console.WriteLine(result);
         }
     }
 }

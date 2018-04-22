@@ -1,3 +1,4 @@
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace SimpleCalculator.Test.Unit
@@ -77,6 +78,15 @@ namespace SimpleCalculator.Test.Unit
             int number2 = 5;
             double result = calculatorEngine.Calculate("/", number1, number2);
             Assert.AreEqual(2, result);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidOperationException))]
+        public void Throw_Exception_If_Operation_Is_Not_A_Known_Type()
+        {
+            int number1 = 10;
+            int number2 = 5;
+            calculatorEngine.Calculate("$", number1, number2);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 
 namespace SimpleCalculator
 {
@@ -27,7 +28,7 @@ namespace SimpleCalculator
                     result = firstNumber / secondNumber;
                     break;
                 default:
-                    throw new InvalidExpressionException("Provided operation is not a known type.");
+                    throw new InvalidOperationException("Provided operation is not a known type.");
             }
 
             return result;

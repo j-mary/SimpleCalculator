@@ -15,15 +15,15 @@ namespace SimpleCalculator
                 case "+":
                     result = firstNumber + secondNumber;
                     break;
-                case "subtraction":
+                case "subtract":
                 case "-":
                     result = firstNumber - secondNumber;
                     break;
-                case "multiplication":
+                case "multiply":
                 case "*":
                     result = firstNumber * secondNumber;
                     break;
-                case "division":
+                case "divide":
                 case "/":
                     result = firstNumber / secondNumber;
                     break;
